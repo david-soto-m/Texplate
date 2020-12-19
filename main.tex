@@ -1,0 +1,84 @@
+%!TEX TS-program = lualatex
+\documentclass[15pt]{article}
+
+%Basics--------------------%
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage[spanish]{babel}
+%--------------------------%
+
+%PrettyLinks----------%
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+%---------------------%
+
+%Fonts------------------------------------------------%
+\usepackage{fontspec}
+\usepackage{titlesec}
+\setromanfont[Scale=1.05,
+BoldFont=Open Sans Bold,
+ItalicFont=Open Sans Italic,
+BoldItalicFont=Open Sans Bold Italic,
+]{Open Sans}
+
+\setsansfont[
+BoldFont=Geomanist Light,
+ItalicFont=Geomanist Light Italic,
+BoldItalicFont=Geomanist Italic,
+]{Geomanist}
+
+\setmonofont[
+BoldFont=Ubuntu Mono Bold,
+ItalicFont=Ubuntu Mono Italic,
+BoldItalicFont=Ubuntu Mono Bold Italic,
+]{Ubuntu Mono}
+
+\titleformat*{\section}{\LARGE\bfseries\sffamily}
+\titleformat*{\subsection}{\Large\bfseries\sffamily}
+\titleformat*{\subsubsection}{\large\itshape\sffamily}
+%-----------------------------------------------------%
+
+%CodeStyle-------------------------------------%
+\usepackage{listings}
+\definecolor{codecomment}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{codekeyword}{rgb}{1,0.5,0}
+\lstdefinestyle{mystyle}{
+    commentstyle=\color{codecomment},
+    keywordstyle=\bfseries\color{codekeyword},
+    stringstyle=\color{codepurple},
+	basicstyle=\ttfamily,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=4pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=4
+}
+%----------------------------------------------%
+
+%Info-----------------------%
+\title{Práctica estructuras}
+\author{David}
+%\date{9-12-20}
+%Info-----------------------%
+
+\begin{document}
+	\maketitle
+	\newpage
+	\tableofcontents
+	\newpage
+	\lstset{style=mystyle}
+\end{document}

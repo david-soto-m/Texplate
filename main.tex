@@ -1,14 +1,16 @@
 %!TEX TS-program = lualatex
-\documentclass{article}
+\documentclass[10pt]{article}
 
 %Basics--------------------%
-\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage[a4paper, total={160mm, 250mm}]{geometry}
 \usepackage{hyperref}
 \usepackage{amsmath}
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{subcaption}
-\usepackage[spanish]{babel}
+\usepackage{float} %fix
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{placeins}
 %--------------------------%
 
 %PrettyLinks----------%
@@ -77,7 +79,21 @@ BoldItalicFont=Ubuntu Mono Bold Italic,
 %Info-----------------------%
 
 \begin{document}
-	\maketitle
+	\begin{titlepage}
+        \centering
+        \makeatletter
+        \vspace*{1cm}
+	
+        \Huge
+        \sffamily\textbf{{\@title}}
+	
+        ~\vfill
+	
+        \Large
+        ~\hfill\rmfamily{\@author}
+	
+        ~\hfill\@date
+    \end{titlepage}
 	\newpage
 	\tableofcontents
 	\newpage

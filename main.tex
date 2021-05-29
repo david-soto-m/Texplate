@@ -3,14 +3,23 @@
 
 %Basics--------------------%
 \usepackage[a4paper, total={160mm, 250mm}]{geometry}
+
+%colors%
 \usepackage{hyperref}
-\usepackage{amsmath}
 \usepackage{xcolor}
-\usepackage{graphicx}
-\usepackage{subcaption}
-\usepackage{float} %fix
+
+%Fiigures%
+\usepackage{graphicx} %includegraphics
+\usepackage{floats} %H
+\usepackage{placeins} %FloarBarrier
+\usepackage{subcaption}% subfigures
+
+%Math/Science%
+\usepackage{amsmath}
+\usepackage{siunitx}%\si{volt}%
+
+%Español%
 \usepackage[spanish,es-tabla]{babel}
-\usepackage{placeins}
 %--------------------------%
 
 %PrettyLinks----------%
@@ -70,6 +79,7 @@ BoldItalicFont=Ubuntu Mono Bold Italic,
 	showtabs=false,
 	tabsize=4
 }
+\lstset{style=mystyle}
 %----------------------------------------------%
 
 %Info-----------------------%

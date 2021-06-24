@@ -1,0 +1,10 @@
+{
+	"name":"PCI",
+	"files": [
+		{
+		"directory": "./",
+		"filters": [ "*.tex" ],
+		"recursive": 1 
+		}
+		],
+}

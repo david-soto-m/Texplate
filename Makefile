@@ -50,3 +50,12 @@ ifeq ($(wildcard $(GOAL)), $(GOAL))
 endif
 	$(MAKE) clean
 endif
+
+open:
+	kate *.tex
+	kate */*.tex
+
+git_quick:
+	git add -u
+	git commit
+	git push -u origin HEAD

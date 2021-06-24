@@ -18,6 +18,9 @@
 %Math/Science%
 \usepackage{amsmath}
 \usepackage{siunitx}%\si{volt}%
+\sisetup{per-mode = symbol-or-fraction}
+% \usepackage{multirow}
+\usepackage[gobble=auto]{pythontex}
 
 %Español%
 \usepackage[spanish,es-tabla]{babel}
@@ -109,5 +112,9 @@ BoldItalicFont=Ubuntu Mono Bold Italic,
 	{\hypersetup{linkcolor=black}\tableofcontents}
 	\newpage
 	a
+	\begin{pyconsole}
+	var = 1 + 10
+	var
+	\end{pyconsole}
 	\lstset{style=mystyle}
 \end{document}

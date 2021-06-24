@@ -14,14 +14,10 @@ PY_AUX_FILES = $(NAME).pytxcode
 build:
 	$(COMP) $(TARG)
 
-all: $(AUX_FILES) $(GOAL)
-ifeq ($(wildcard $(PY_AUX_FILES)), $(PY_AUX_FILES))
-	$(PY_COMP) $(TARG)
-endif
+all:
 	$(COMP) $(TARG)
-
-$(AUX_FILES) $(GOAL):
-	echo "here"
+# Descomentar en caso de usar pythontex
+# 	$(PY_COMP) $(TARG)
 	$(COMP) $(TARG)
 
 clear:
@@ -58,4 +54,4 @@ open:
 git_quick:
 	git add -u
 	git commit
-	git push -u origin HEAD
+	git push origin HEAD

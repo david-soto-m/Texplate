@@ -10,6 +10,12 @@ PY_COMP = pythontex
 PY_AUX_DIR = pythontex-files-$(NAME)
 PY_AUX_FILES = $(NAME).pytxcode
 
+EDITOR = kate
+SRC_FILES = *.tex */*.tex
+
+PDF_TOOL = okular
+SOURCES = /home/david/Documents/Uni/clases/MI/C2/Construcción/PCI/*
+TAIL = 2> ~/.naverrorlog &
 
 build:
 	$(COMP) $(TARG)
@@ -48,8 +54,8 @@ endif
 endif
 
 open:
-	kate *.tex
-	kate */*.tex
+	$(EDITOR) $(SRC_FILES)
+	$(PDF_TOOL) $(SOURCES) $(TAIL)
 
 git_quick:
 	git add -u

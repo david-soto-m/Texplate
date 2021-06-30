@@ -43,7 +43,7 @@ ifeq ($(wildcard $(GOAL)),$(GOAL))
 	rm $(GOAL)
 endif
 
-finish:
+finish: $(GOAL)
 ifeq ($(FINISH_NAME),$(GOAL))
 	$(MAKE) clear
 else
@@ -52,6 +52,9 @@ ifeq ($(wildcard $(GOAL)), $(GOAL))
 endif
 	$(MAKE) clean
 endif
+
+$(GOAL):
+	$(MAKE) all
 
 open:
 	$(EDITOR) $(SRC_FILES)

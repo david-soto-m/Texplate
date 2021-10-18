@@ -1,6 +1,6 @@
 # Texplate
 
-(Lua)latex template for engineering lab reports anad similar stuff.
+(Lua)latex template for engineering lab reports and similar stuff.
 Centered arround being able to code and put figures and math and formulas.
 Also style.
 

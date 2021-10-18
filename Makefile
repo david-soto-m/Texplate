@@ -14,8 +14,10 @@ EDITOR = kate
 SRC_FILES = *.tex */*.tex
 
 PDF_TOOL = okular
-SOURCES = /home/david/Documents/Uni/clases/MI/C2/Construcción/PCI/*
-TAIL = 2> ~/.naverrorlog &
+
+# Set up for open
+SOURCES = $(HOME)
+TAIL = 2> /dev/null &
 
 build:
 	$(COMP) $(TARG)
@@ -57,8 +59,14 @@ $(GOAL):
 	$(MAKE) all
 
 open:
-	$(EDITOR) $(SRC_FILES)
+	$(EDITOR) $(SRC_FILES) $(TAIL)
+ifneq ($(SOURCES), $(HOME))
 	$(PDF_TOOL) $(SOURCES) $(TAIL)
+endif
+
+start_git:
+	rm -rf .git
+	git init
 
 git_quick:
 	git add -u

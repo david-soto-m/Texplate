@@ -3,10 +3,13 @@ TARG = $(NAME).tex
 GOAL = $(NAME).pdf
 ENGINE = lualatex
 
-
 PY_COMP = pythontex
 PY_AUX_DIR = pythontex-files-$(NAME)
 PY_AUX_FILES = $(NAME).pytxcode
+
+SCRLOC = scripts
+SECTIONER = $(SCRLOC)/new_sec.py
+PYTHON = python3
 
 EDITOR = kate
 SRC_FILES = *.tex */*.tex
@@ -38,10 +41,10 @@ ifeq ($(wildcard $(PY_AUX_FILES)), $(PY_AUX_FILES))
 endif
 
 section:
-	python3 internal_packages/new_sec.py section
+	$(PYTHON) $(SECTIONER) section
 
 chapter:
-	python3 internal_packages/new_sec.py chapter
+	$(PYTHON) $(SECTIONER) chapter
 
 open:
 	$(EDITOR) $(SRC_FILES) $(TAIL)
@@ -50,7 +53,8 @@ ifneq ($(SOURCES), $(HOME))
 endif
 
 git_start:
-	rm -rf .git
+	$(MAKE) git_rm
+	touch README.md
 	git init
 
 git_rm:

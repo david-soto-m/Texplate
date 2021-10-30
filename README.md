@@ -28,4 +28,5 @@ pay what you want basis starting from 15€.
 
 There is a python helper script called `new_sec` to create new chapters and
 sections. It will create a file with a name like `sec_1` or `ch_14` in whatever
-directory is called. There are some make shortcuts to it.
+directory is called. There are twho make shortcuts to it `make section` and
+`make chapter`.

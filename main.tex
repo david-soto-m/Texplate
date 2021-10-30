@@ -1,7 +1,6 @@
 %!TEX program = lualatex
 \documentclass[10pt]{article}
 
-%Basics--------------------%
 \usepackage[a4paper, total={160mm, 250mm}]{geometry}
 \setlength{\parskip}{1em}
 
@@ -16,19 +15,17 @@
 \title{Title here}
 \author{Author}
 %\date{day-month-year}
-%Info-----------------%
+%---------------------%
 
 \begin{document}
     \begin{titlepage}
+        \hypersetup{pageanchor=false}
         \centering
         \makeatletter
         \vspace*{1cm}
-
         \Huge
         \sffamily\textbf{{\@title}}
-
         ~\vfill
-
         \Large
         ~\hfill\rmfamily{\@author}
 

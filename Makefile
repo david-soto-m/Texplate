@@ -25,7 +25,7 @@ pythontex:
 	$(PY_COMP) $(TARG) --interpreter python:python3
 	$(ENGINE) $(TARG)
 
-clear:
+clean:
 	latexmk -c
 
 wipe:

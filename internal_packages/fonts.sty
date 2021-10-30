@@ -1,0 +1,28 @@
+\NeedsTeXFormat{LaTeX2e}
+
+
+\RequirePackage{fontspec}
+\RequirePackage{titlesec}
+
+
+\setromanfont[Scale=1.05,
+BoldFont=Open Sans Bold,
+ItalicFont=Open Sans Italic,
+BoldItalicFont=Open Sans Bold Italic,
+]{Open Sans}
+
+\setsansfont[
+BoldFont=Geomanist Light,
+ItalicFont=Geomanist Light Italic,
+BoldItalicFont=Geomanist Italic,
+]{Geomanist}
+
+\setmonofont[
+BoldFont=Ubuntu Mono Bold,
+ItalicFont=Ubuntu Mono Italic,
+BoldItalicFont=Ubuntu Mono Bold Italic,
+]{Ubuntu Mono}
+
+\titleformat*{\section}{\LARGE\bfseries\sffamily}
+\titleformat*{\subsection}{\Large\bfseries\sffamily}
+\titleformat*{\subsubsection}{\large\itshape\sffamily}

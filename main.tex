@@ -1,116 +1,44 @@
-%!TEX TS-program = lualatex
+%!TEX program = lualatex
 \documentclass[10pt]{article}
 
 %Basics--------------------%
 \usepackage[a4paper, total={160mm, 250mm}]{geometry}
 \setlength{\parskip}{1em}
 
-%colors%
-\usepackage{hyperref}
-\usepackage{xcolor}
+\usepackage{internal_packages/fonts}
+% \usepackage{internal_packages/bibliography}
+\usepackage{internal_packages/links_color_code}
+\usepackage{internal_packages/figures}
+\usepackage{internal_packages/math_sci}
+\usepackage{internal_packages/others}
 
-%Fiigures%
-\usepackage{graphicx} %includegraphics
-\usepackage{float} %H
-\usepackage{placeins} %FloarBarrier
-\usepackage{subcaption}% subfigures
-
-%Math/Science%
-\usepackage{amsmath}
-\usepackage{siunitx}%\si{volt}%
-\sisetup{per-mode = symbol-or-fraction}
-% \usepackage{multirow}
-% \usepackage[gobble=auto]{pythontex}
-
-%Español%
-\usepackage[spanish,es-tabla]{babel}
-%--------------------------%
-
-%PrettyLinks----------%
-\hypersetup{
-	colorlinks=true,
-	linkcolor=blue,
-	filecolor=magenta,
-	urlcolor=cyan,
-}
-%---------------------%
-
-%Fonts------------------------------------------------%
-\usepackage{fontspec}
-\usepackage{titlesec}
-\setromanfont[Scale=1.05,
-BoldFont=Open Sans Bold,
-ItalicFont=Open Sans Italic,
-BoldItalicFont=Open Sans Bold Italic,
-]{Open Sans}
-
-\setsansfont[
-BoldFont=Geomanist Light,
-ItalicFont=Geomanist Light Italic,
-BoldItalicFont=Geomanist Italic,
-]{Geomanist}
-
-\setmonofont[
-BoldFont=Ubuntu Mono Bold,
-ItalicFont=Ubuntu Mono Italic,
-BoldItalicFont=Ubuntu Mono Bold Italic,
-]{Ubuntu Mono}
-
-\titleformat*{\section}{\LARGE\bfseries\sffamily}
-\titleformat*{\subsection}{\Large\bfseries\sffamily}
-\titleformat*{\subsubsection}{\large\itshape\sffamily}
-%-----------------------------------------------------%
-
-%CodeStyle-------------------------------------%
-\usepackage{listings}
-\definecolor{codecomment}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{codekeyword}{rgb}{1,0.5,0}
-\lstdefinestyle{mystyle}{
-	commentstyle=\color{codecomment},
-	keywordstyle=\bfseries\color{codekeyword},
-	stringstyle=\color{codepurple},
-	basicstyle=\ttfamily\scriptsize,
-	breakatwhitespace=false,
-	breaklines=true,
-	captionpos=b,
-	keepspaces=true,
-	numbers=left,
-	numbersep=4pt,
-	showspaces=false,
-	showstringspaces=false,
-	showtabs=false,
-	tabsize=4
-}
-\lstset{style=mystyle}
-%----------------------------------------------%
-
-%Info-----------------------%
+%Info-----------------%
 \title{Title here}
-\author{David}
+\author{Author}
 %\date{day-month-year}
-%Info-----------------------%
+%Info-----------------%
 
 \begin{document}
-	\begin{titlepage}
-		\centering
-		\makeatletter
-		\vspace*{1cm}
+    \begin{titlepage}
+        \centering
+        \makeatletter
+        \vspace*{1cm}
 
-		\Huge
-		\sffamily\textbf{{\@title}}
+        \Huge
+        \sffamily\textbf{{\@title}}
 
-		~\vfill
+        ~\vfill
 
-		\Large
-		~\hfill\rmfamily{\@author}
+        \Large
+        ~\hfill\rmfamily{\@author}
 
-		~\hfill\@date
-	\end{titlepage}
-	\newpage
-	{\hypersetup{linkcolor=black}\tableofcontents}
-	\newpage
-	Lorem ipsum ...
-	\lstset{style=mystyle}
+        ~\hfill\@date
+    \end{titlepage}
+    \newpage
+    {\hypersetup{linkcolor=black}\tableofcontents}
+    \newpage
+%     \input{sec_1/sec_1}
+    \ifdefined \printbibliography
+    \printbibliography
+    \fi
 \end{document}

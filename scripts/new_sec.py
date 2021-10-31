@@ -38,8 +38,9 @@ if elements == []:
 
 name = typ['short'] + str(elements[0] + 1)
 mkdir(name)
+mkdir(name + "/figures")
 
-with open(Path(__file__).parent / 'template.tex', 'r') as f:
+with open(Path(__file__).parent / 'template.txt', 'r') as f:
     templ = f.read()
     solved = templ.format(typ['command'], '{' + name + '}')
     f.close()

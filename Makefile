@@ -59,8 +59,9 @@ git_start:
 
 git_rm:
 	rm README.md
-ifeq ($(wildcard .git, .git )
+ifeq ($(wildcard .git), .git )
 	rm -rf .git
+endif
 
 git_quick:
 	git add -u

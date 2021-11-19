@@ -27,14 +27,16 @@
         \fontsize{75pt}{80pt}\selectfont\sffamily\textup{{\@title}}
         ~\vfill
         \Large
-        ~\hfill\rmfamily{\@author}
+        \flushright{\rmfamily{\@author}}
 
-        ~\hfill\@date
+        \flushright{\rmfamily{\@date}}
+        \makeatother
     \end{titlepage}
     \newpage
     {\hypersetup{linkcolor=black}\tableofcontents}
     \newpage
 %     \input{sec_1/sec_1}
+    Lorem @
     \ifdefined \printbibliography
     \printbibliography
     \fi

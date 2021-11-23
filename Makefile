@@ -17,6 +17,7 @@ SRC_FILES = *.tex */*.tex
 PDF_TOOL = okular
 
 # Set up for open
+# change home for the targets 
 SOURCES = $(HOME)
 TAIL = 2> /dev/null &
 

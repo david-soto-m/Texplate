@@ -1,6 +1,5 @@
 NAME = main
 TARG = $(NAME).tex
-GOAL = $(NAME).pdf
 ENGINE = lualatex
 
 PY_COMP = pythontex
@@ -17,12 +16,16 @@ SRC_FILES = *.tex */*.tex
 PDF_TOOL = okular
 
 # Set up for open
-# change home for the targets 
+# change home for the targets
 SOURCES = $(HOME)
 TAIL = 2> /dev/null &
 
 build:
 	latexmk -pdf $(TARG) -$(ENGINE)
+
+# continuous mode
+cont:
+	latexmk -pvc -pdf $(TARG) -$(ENGINE)
 
 pythontex:
 	latexmk -pdf $(TARG) -$(ENGINE)

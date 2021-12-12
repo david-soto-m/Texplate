@@ -16,7 +16,11 @@ types = {
         'chapter': {
             'short': 'ch_',
             'command': '\\chapter{}',
-            }
+            },
+        'appendix': {
+            'short': 'ap_',
+            'command':'\\chapter{}',
+        },
     }
 
 if len(argv) == 2:

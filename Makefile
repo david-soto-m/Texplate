@@ -50,6 +50,9 @@ section:
 chapter:
 	$(PYTHON) $(SECTIONER) chapter
 
+appendix:
+	$(PYTHON) $(SECTIONER) appendix
+
 open:
 	$(EDITOR) $(SRC_FILES) $(TAIL)
 ifneq ($(SOURCES), $(HOME))

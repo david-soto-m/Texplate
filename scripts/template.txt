@@ -1,6 +1,6 @@
-{0} \label{1}
+{0}\label{1}
 
 
-\ifdefined \FloatBarrier
-    \FloatBarrier
+\ifdefined\FloatBarrier{{}}
+    \FloatBarrier{{}}
 \fi

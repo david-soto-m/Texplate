@@ -29,7 +29,7 @@
         \makeatletter
         \vspace*{1cm}
         \fontsize{75pt}{80pt}\selectfont\sffamily\textup{{\@title}}
-        ~\vfill
+        \vfill
         \Large
         \flushright{\rmfamily{\@author}}
 
@@ -42,7 +42,7 @@
 %     \input{sec_1/sec_1}
 %     \appendix
 %     \input{ap_1/ap_1}
-    \ifdefined \printbibliography
-    \printbibliography
+    \ifdefined\printbibliography{}
+    \printbibliography{}
     \fi
 \end{document}

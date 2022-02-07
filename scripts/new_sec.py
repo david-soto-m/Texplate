@@ -19,7 +19,7 @@ types = {
             },
         'appendix': {
             'short': 'ap_',
-            'command':'\\chapter{}',
+            'command': '\\chapter{}',
         },
     }
 
@@ -27,9 +27,9 @@ if len(argv) == 2:
     typ = types[argv[1]]
 elif len(argv) == 3:
     if argv[1][-1] == '_':
-        argv[1]=argv[1][0:-1]
+        argv[1] = argv[1][0:-1]
     typ = {
-        'short': argv[1].replace('_','-') + '_',
+        'short': argv[1].replace('_', '-') + '_',
         'command': argv[2],
         }
 else:

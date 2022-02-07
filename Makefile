@@ -20,6 +20,9 @@ PDF_TOOL = okular
 SOURCES = $(HOME)
 TAIL = 2> /dev/null &
 
+lint:
+	chktex $(TARG)
+
 build:
 	latexmk -pdf $(TARG) -$(ENGINE)
 

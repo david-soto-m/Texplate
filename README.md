@@ -31,8 +31,8 @@ going to be
   `
 * `PDF_TOOL = okular`: The command to open pdf files
   `
-* `SOURCES = $(HOME)`: All the pdfs to open at the beggining of the project
-* `TAIL = 2> /dev/null &`: Where errors should be logged, usefull if your tex
+* `SOURCES = $(HOME)`: All the pdfs to open at the beginning of the project
+* `TAIL = 2> /dev/null &`: Where errors should be logged, useful if your text
 editor blocks the command line.
 
 
@@ -54,7 +54,7 @@ Start a continuous session of latexmk. It will get stuck when you introduce
 some bad latex, such as an environment that is not properly closed, a bad
 reference.... Most of the time you can fix your problem and then press
 `Control-d` to keep the run or `Control-c` to exit it before reentering it.
-Sometimes it can get really stuck and you may need to open up a terminal and
+Sometimes it can get really stuck, and you may need to open up a terminal and
 kill it with `pkill -KILL lualatex`. It looks scary but is really worth it and
 time saving, having (kinda of) immediate feedback on what you have just written.
 
@@ -178,23 +178,23 @@ By default it avoids splitting paragraphs over different pages, to allow for
 that you must comment line 7 in `internal_packages/other.sty`.
 
 
-### Biblatex/Biber
+### Bibtex/Biber
 
 By default the bibliography is processed with Biber. If you want to process it
-with Biblatex but you have compiled once with Biber activated, you will have to
-wipe you compilation with `make wipe` and then compile again. In order to
-use Biblatex you only have to uncomment the line in
+with Bibtex but you have compiled once with Biber activated, you will have to
+wipe your compilation with `make wipe` and then compile again. In order to
+use Bibtex you only have to uncomment the line in
 `internal_packages/bibliography.sty`
 
 ### Pythontex
 
-To use pythontex remove `.latexmkrc` out directory and use `make pythontex`
-You might need to install pygments with `pip install pygments`
+To use pythontex remove in the`.latexmkrc` file the `out_dir` line and use
+`make pythontex` You might need to install pygments with `pip install pygments`
 
 ---
 
 ## Learn
 
 For a quick latex tutorial check [this site](https://latex-tutorial.com/).
-For a more extensive tutorials check
+For more extensive tutorials check
 [this other site](https://www.overleaf.com/learn)
